@@ -1,2 +1,2 @@
 # Animator
-an animation program built with the javascript canvas
+a pixel based animation program built with the javascript canvas
