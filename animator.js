@@ -5,6 +5,8 @@ var context = canvas.getContext("2d");
 var width = 32;
 var height = 32;
 var frames = [];
+//giving the colors a number
+var colorIndex = ["white","red","green","yellow","blue"];
 //loops through the array to make a 32 by 32 matrix
 function newFrame( width, height){
 frames[frames.length] = [];
@@ -15,4 +17,13 @@ frames[frames.length] = [];
   }
 }
 }
+function render(currentFrame) {
+  for (var i = 0; i < height; i++) {
+    for (var j = 0; j < width; j++) {
+      context.fillStyle = colorIndex[frames[currentFrame][i][j]];  
+      context.fillRect(j*12.5,i*12.5, 12.5,12.5);
+    }
+  }
+}
+
 newFrame(width, height);
